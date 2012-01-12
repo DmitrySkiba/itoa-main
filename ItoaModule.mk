@@ -103,6 +103,10 @@ $(call itoa-sysroot-copy-files,\
 $(eval $(call itoa-copy-file,\
     $(MODULE_PATH)/LICENSE.txt,lib$(MODULE_NAME).LICENSE.txt))
 
+# Temporary hack
+$(eval $(call itoa-copy-file,\
+    $(MODULE_PATH)/src/UIKit/libuikit.so,platform/arch-$(TARGET_ARCH)/usr/lib/libuikit.so))
+
 #MODULE_CFLAGS += \
 #    -I$(MODULE_PATH)/include \
 #    -I$(MODULE_PATH)/src \
